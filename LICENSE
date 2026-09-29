@@ -1,0 +1,58 @@
+MIT License
+
+Copyright (c) 2026 fore4stwOw2
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Scope of this license
+
+The MIT terms above cover the code and documentation in this repository: the
+MCP servers, API clients, verification scripts, tests and skill definitions.
+
+They do not cover, and this project does not grant any rights to:
+
+- The video generation models (Doubao Seedance, Tongyi Wanxiang / Wan) or their
+  outputs. These are operated by their respective providers.
+- The API gateway this software talks to, or access credentials for it.
+- Any video generated through this software.
+
+## Conditions of use
+
+Using this software requires your own API credentials from a gateway that
+serves the video endpoints. No credentials are included or implied, and this
+project is not affiliated with, endorsed by, or operated by any model provider
+or gateway operator.
+
+You are responsible for:
+
+- Obtaining credentials legitimately and keeping them secret.
+- Complying with the acceptable use policy and terms of the gateway and the
+  upstream model providers.
+- All charges incurred. Video generation is billed per render and scales with
+  duration, resolution and model tier.
+- The content you generate, and the rights to any reference images, video or
+  audio you supply as input.
+- Complying with applicable law, including disclosure requirements for
+  synthetic media where they apply in your jurisdiction.
+
+Generated video is the responsibility of the person who requested it. Do not
+use this software to produce content that infringes third-party rights,
+impersonates real people without consent, or violates the providers' policies.
