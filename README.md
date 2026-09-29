@@ -56,6 +56,9 @@ curl -fsSL https://raw.githubusercontent.com/fore4stwOw2/naoshengyun-video-skill
 3. 拿你的 key 问网关要模型清单，**只配置这个 key 真能用的 skill**
 4. 写入检测到的宿主配置（Claude Desktop / Codex CLI / WorkBuddy），权限设为 `600`
 
+Claude Desktop 和 Codex CLI 到此即可用。**WorkBuddy 的连接器只能在界面里添加**，
+最后一步见 [WORKBUDDY-SETUP.md](WORKBUDDY-SETUP.md)。
+
 卸载：
 
 ```bash

@@ -193,22 +193,11 @@ python3 -c "import sys; print(sys.executable)"
 
 ### Tencent WorkBuddy
 
-WorkBuddy 里视频模型**不能**通过 设置 → 模型 添加。那个入口只支持对话类模型,
-加进去不会工作。要走连接器:
+WorkBuddy 的连接器只能在界面里添加,步骤和截图另开了一页:
 
-1. 打开**连接器**管理页
-2. 点右上角 **自定义连接器**
-3. 按以下内容填写:
+**→ [WORKBUDDY-SETUP.md](WORKBUDDY-SETUP.md)**
 
-| 字段 | 填什么 |
-|---|---|
-| 命令 | 上面取到的解释器完整路径 |
-| 参数 | `/你的路径/wan-video/scripts/mcp_server.py` |
-| 环境变量 | `WAN_API_KEY=sk-你的key` |
-
-4. 保存并启用。卡片上出现**绿点**表示连接成功。
-
-两个 skill 可以同时添加,各建一个连接器即可。
+一句话版本:视频模型**不能**走 设置 → 模型,必须走 连接器 → 自定义连接器。
 
 ### Claude Desktop
 

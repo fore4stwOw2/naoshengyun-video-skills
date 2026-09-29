@@ -114,6 +114,10 @@ Claude Desktop, in `claude_desktop_config.json`, then restart the app:
 ```
 
 Tencent WorkBuddy: use **Connectors → Custom connector**, not Settings → Models.
+WorkBuddy has no writable config file, so this step cannot be automated. Point the
+user at `WORKBUDDY-SETUP.md` and read them the `command`, `args` and `env` values
+from the reference file the installer wrote; do not ask them to retype a key you
+have not been given.
 The model dialog configures `/chat/completions` endpoints and cannot drive an
 asynchronous video workflow.
 
