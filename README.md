@@ -1,5 +1,9 @@
 # Video Generation Skills for MCP
 
+[![tests](https://github.com/fore4stwOw2/naoshengyun-video-skills/actions/workflows/tests.yml/badge.svg)](https://github.com/fore4stwOw2/naoshengyun-video-skills/actions/workflows/tests.yml)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+
 两个 MCP server，让 AI 助手直接生成视频。支持 Codex、Claude Desktop、
 Tencent WorkBuddy，以及任何兼容 MCP 的宿主。
 
@@ -91,6 +95,9 @@ python3 wan-video/scripts/test_wan_client.py             # 40 tests
 
 60 个离线测试，不需要网络和凭据。覆盖请求构造、模型能力校验、尺寸规则、双接口状态
 归一化、轮询终止条件和密钥脱敏。
+
+CI 在 Python 3.9 到 3.13 上跑这些测试，同时验证客户端无第三方依赖、MCP 握手能列出
+全部工具，并拦截误提交的凭据。
 
 ## 许可与责任
 
