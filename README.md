@@ -31,7 +31,12 @@ Tencent WorkBuddy，以及任何兼容 MCP 的宿主。
 这两个 server 把 提交/轮询/下载 整个循环封装成普通的工具调用。AI 一次调用就能拿到
 本地视频文件，不用自己管轮询和超时。
 
-## 快速开始
+## 开始使用
+
+**第一次安装，请看 [GETTING-STARTED.md](GETTING-STARTED.md)** —— 从获取 API Key 到
+生成第一个视频的完整步骤，约 15 分钟，不需要开发经验。
+
+熟悉命令行的话：
 
 ```bash
 git clone https://github.com/fore4stwOw2/naoshengyun-video-skills.git
@@ -64,6 +69,7 @@ curl -s https://token.naoshengyun.com/v1/models -H "Authorization: Bearer sk-你
 
 | 文件 | 内容 |
 |---|---|
+| [GETTING-STARTED.md](GETTING-STARTED.md) | **新用户从这里开始**：图文步骤，含 Key 获取、平台配置、问题排查 |
 | [USAGE.md](USAGE.md) | 完整使用指南：安装、三个宿主的配置、工具清单、常见问题 |
 | [AGENTS.md](AGENTS.md) | 给 AI agent 的操作规范，其他 agent 平台可直接读取 |
 | `*/SKILL.md` | 单个 skill 的说明与提示词建议 |
