@@ -17,6 +17,29 @@ Two MCP stdio servers wrapping asynchronous video generation APIs:
 Requirements: Python 3.9 or newer. No third-party packages, no build step, no
 package manager. Both servers speak MCP `2024-11-05` over stdin/stdout.
 
+## Preferred path: run the installer
+
+If the user has a key and the machine has network access, prefer the installer
+over the manual steps. It performs every step below, refuses to overwrite an
+existing host config, and — importantly — queries the gateway to find out which
+models the key's group actually exposes, then configures only the skills that
+key can use.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/fore4stwOw2/naoshengyun-video-skills/main/install.py -o install.py
+python3 install.py --key sk-...
+```
+
+Useful flags: `--host claude|codex|workbuddy`, `--dir`, `--gateway`,
+`--uninstall`. Omit `--key` to prompt for it without echoing.
+
+Do not invent a key, and do not read one out of the user's existing config to
+reuse elsewhere. If the user has no key, stop and ask for one.
+
+The installer exits non-zero with a single-line reason on failure. If it cannot
+run (no network, restricted environment, user wants manual control), fall back to
+the steps below.
+
 ## Step 1: place the skill directories
 
 Copy the directory you need to wherever the host loads skills from. For Codex

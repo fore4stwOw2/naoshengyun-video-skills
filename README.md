@@ -33,10 +33,42 @@ Tencent WorkBuddy，以及任何兼容 MCP 的宿主。
 
 ## 开始使用
 
-**第一次安装，请看 [GETTING-STARTED.md](GETTING-STARTED.md)** —— 从获取 API Key 到
-生成第一个视频的完整步骤，约 15 分钟，不需要开发经验。
+一条命令，自动下载 skill、校验 key、写好配置：
 
-熟悉命令行的话：
+```bash
+curl -fsSL https://raw.githubusercontent.com/fore4stwOw2/naoshengyun-video-skills/main/install.py | python3 - --key sk-你的key
+```
+
+装完重启 AI 应用，直接说人话：
+
+> 生成一个 5 秒视频：橘猫在阳光下的窗台上伸懒腰，镜头缓慢推进，电影感
+
+不想把 key 写在命令里，就省掉 `--key`，安装器会在终端里提示输入（不回显）：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/fore4stwOw2/naoshengyun-video-skills/main/install.py | python3 -
+```
+
+安装器做了这几件事，**不会覆盖你已有的配置**（改动前自动备份，只增删自己的条目）：
+
+1. 检查 Python 版本
+2. 下载 skill 到 `~/.codex/skills/`
+3. 拿你的 key 问网关要模型清单，**只配置这个 key 真能用的 skill**
+4. 写入检测到的宿主配置（Claude Desktop / Codex CLI / WorkBuddy），权限设为 `600`
+
+卸载：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/fore4stwOw2/naoshengyun-video-skills/main/install.py | python3 - --uninstall
+```
+
+常用参数：`--host claude|codex|workbuddy` 只配一个宿主，`--dir` 换安装目录，
+`--gateway` 换网关地址。
+
+<details>
+<summary>手动安装（想自己控制每一步，或安装器跑不通时）</summary>
+
+完整步骤见 [GETTING-STARTED.md](GETTING-STARTED.md)。简版：
 
 ```bash
 git clone https://github.com/fore4stwOw2/naoshengyun-video-skills.git
@@ -47,9 +79,9 @@ cp -R wan-video ~/.codex/skills/
 WAN_API_KEY=sk-你的key python3 ~/.codex/skills/wan-video/scripts/verify_setup.py
 ```
 
-预检全绿后，在宿主里注册 MCP server（见 [USAGE.md](USAGE.md)），然后直接说人话：
+预检全绿后，在宿主里注册 MCP server，见 [USAGE.md](USAGE.md)。
 
-> 生成一个 5 秒视频：橘猫在阳光下的窗台上伸懒腰，镜头缓慢推进，电影感
+</details>
 
 ## 需要准备什么
 
