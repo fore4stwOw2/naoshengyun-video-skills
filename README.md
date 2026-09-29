@@ -30,8 +30,8 @@ Tencent WorkBuddy，以及任何兼容 MCP 的宿主。
 ## 快速开始
 
 ```bash
-git clone https://github.com/fore4stwOw2/mcp-video-skills.git
-cd mcp-video-skills
+git clone https://github.com/fore4stwOw2/naoshengyun-video-skills.git
+cd naoshengyun-video-skills
 cp -R wan-video ~/.codex/skills/
 
 # 预检：确认环境和 key 分组都没问题

@@ -13,8 +13,8 @@ Claude Desktop。
 ## 一、安装
 
 ```bash
-git clone https://github.com/fore4stwOw2/mcp-video-skills.git
-cd mcp-video-skills
+git clone https://github.com/fore4stwOw2/naoshengyun-video-skills.git
+cd naoshengyun-video-skills
 cp -R seedance-video ~/.codex/skills/
 cp -R wan-video ~/.codex/skills/
 ```
